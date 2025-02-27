@@ -1,4 +1,4 @@
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest
 from django.shortcuts import render
 
 from shopapp.models import Product, Order
