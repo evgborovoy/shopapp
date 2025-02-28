@@ -18,7 +18,7 @@ class ProductForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ["delivery_address", "promocode", "products"]
+        fields = ["delivery_address", "promocode", "products", "user"]
 
     def save(self, commit=True, user=None):
         order = super().save(commit=False)

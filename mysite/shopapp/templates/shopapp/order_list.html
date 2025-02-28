@@ -12,7 +12,7 @@
     <div>
     {% for order in orders %}
       <div>
-        <h3>Order: {{ order.pk }}</h3>
+        <h3>Order: {{ order.pk }} <a href=" {% url 'shopapp:order_detail' pk=order.pk %}">Details</a></h3>
         <h4>Address: {{ order.delivery_address }}</h4>
         <p>Ordered by: {% firstof order.user.first_name order.user.username %}</p>
         <div>
@@ -26,6 +26,9 @@
         <hr>
       </div>
     {% endfor %}
+    </div>
+    <div>
+      <a href="{% url 'shopapp:order_create' %}">Create a new Order</a>
     </div>
   {% endif %}
 {% endblock %}
