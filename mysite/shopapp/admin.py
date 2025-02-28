@@ -3,7 +3,7 @@ from django.db.models import QuerySet
 from django.http import HttpRequest
 
 from shopapp.models import Product, Order
-from  shopapp.admin_mixins import ExportAsCSVMixin
+from shopapp.admin_mixins import ExportAsCSVMixin
 
 
 # Для выполнения групповых действий с объектами
